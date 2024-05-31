@@ -8,22 +8,21 @@
 
 <canvas id="the-canvas" style="border: 1px solid black; direction: ltr;"></canvas>
 
-<script src="../../node_modules/pdfjs-dist/build/pdf.mjs" type="module"></script>
+<!--    script src="../../node_modules/pdfjs-dist/build/pdf.mjs" type="module"></script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.3.136/pdf.min.mjs" type="module"></script>
 
 <script id="script" type="module">
   //
   // If absolute URL from the remote server is provided, configure the CORS
   // header on that server.
   //
-//  const url = './helloworld.pdf';
-
   const url = './The Powerhouse_HR.pdf';
 
   //
   // The workerSrc property shall be specified.
   //
   pdfjsLib.GlobalWorkerOptions.workerSrc =
-    '../../node_modules/pdfjs-dist/build/pdf.worker.mjs';
+    'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.3.136/pdf.min.mjs';
 
   //
   // Asynchronous download PDF
